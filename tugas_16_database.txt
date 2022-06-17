@@ -1,0 +1,39 @@
+1.ketikan pada cmd 
+  -cd C:\Program Files\MongoDB\Server\5.0\bin
+  -lalu mongod
+2.ketikan pada cmd 
+  -cd C:\Program Files\MongoDB\Server\5.0\bin
+  -lalu mongo
+3.use matkul
+4.db.matkul.save(
+[
+ {
+ matkul: "Algoritma & Pemrograman",
+ kode_matkul: "1234567",
+ nama_dosen: "Jamal Kosasih"
+ },
+ {
+ matkul: "Rekayasa Perangkat Lunak",
+ kode_matkul: "1234568",
+ nama_dosen: "Ivan Bagus"
+ },
+ {
+ matkul: "Sistem Basis Data",
+ kode_matkul: "1234569",
+ nama_dosen: "Anida Nur Afika"
+ },
+ {
+ matkul: "Pengantar Sistem Komputer",
+ kode_matkul: "1234561",
+ nama_dosen: "Nico Ariesto"
+ },
+ {
+ matkul: "Bahasa Indonesia",
+ kode_matkul: "1234562",
+ nama_dosen: "Fifi Meilani"
+ }
+]
+ );
+5.db.matkul.update({kode_matkul: "1234562"},{$set:{nama_dosen: "Sekar Wandansari"}});
+6.db.matkul.remove({nama_dosen: "Jamal Kosasih"});
+7.db.dropDatabase();
